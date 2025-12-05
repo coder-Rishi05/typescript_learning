@@ -43,3 +43,29 @@ function greet3(name:string):string { // specifying return type as string
 } 
 
 ```
+
+# How TS works
+
+1. ts code : 
+
+it firts goes to 
+
+2. lexer : it tokernize the language basically the whole code get scanned and passed throgh tokens.
+
+then move to  
+
+3. Parser : it create a tree syntax or abstract syntax tree or concrete syntax tree. poori language ke through ek tree banaya jata hai for visualization of the code.
+
+then move to Binder
+
+4. Binder : it take syntax tree and create specialized symbol tree, also create Parent pointer and flow node.
+
+then 
+
+5. Checker : it go throgh the program 2 types it is of 2 typesstructuaral chekcking and syntax check.all the ids use this. 
+
+then 
+
+5. Emmiter : it generate files and strip off. it remove the additional stuff of js code which was added by typescript. node also do the same thing. 
+
+and the emitter convert the ts code to js .map or .t.ds 
