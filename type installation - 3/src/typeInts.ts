@@ -1,0 +1,2 @@
+let drink:string = "water"
+
