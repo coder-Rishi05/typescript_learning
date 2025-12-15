@@ -69,3 +69,10 @@ then
 5. Emmiter : it generate files and strip off. it remove the additional stuff of js code which was added by typescript. node also do the same thing. 
 
 and the emitter convert the ts code to js .map or .t.ds 
+
+
+# Setting up typescript
+
+1. Globally
+2. Project-wise
+
