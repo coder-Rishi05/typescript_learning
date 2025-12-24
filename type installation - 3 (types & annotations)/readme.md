@@ -11,6 +11,7 @@ to use
 npx tsc --init
 
 tsc is typescript compiler
+
 it create a by default tsconfig.json file
 
 npx tsc 
