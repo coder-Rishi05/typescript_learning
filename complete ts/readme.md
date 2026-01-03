@@ -84,16 +84,15 @@ console.log(d);
 ### Arrays
 
 ```ts
-let a = [1,2,43]
+let a = [1, 2, 43];
 
-let a = [1,2,4,5] // this is number array
+let a = [1, 2, 4, 5]; // this is number array
 
-let b = [1,2,3,"hey", {name:"rishi"},{name:23}] // this is number or string array. the ts is fixing and defining all the types we are using in the array.
+let b = [1, 2, 3, "hey", { name: "rishi" }, { name: 23 }]; // this is number or string array. the ts is fixing and defining all the types we are using in the array.
 
 // to fix the types
 
-let arr : number[] = [1,2,3,4,5] // now its value here is fixed if i try now to give a sting value in the array it will give the error as it is predefined here
-
+let arr: number[] = [1, 2, 3, 4, 5]; // now its value here is fixed if i try now to give a sting value in the array it will give the error as it is predefined here
 ```
 
 ### tuples
@@ -101,16 +100,18 @@ let arr : number[] = [1,2,3,4,5] // now its value here is fixed if i try now to 
 isme hm btate han hamre pass do element honge or unke type kya hoga
 
 ```js
-
-let arr: [number,string] = [12,"harsh"]
+let arr: [number, string] = [12, "harsh"];
 
 // yhan hmne pehle hi value bta di ki kis position pe kya kya value hogi and then agr hm value ki position change bhi to error aaega
 
 // now it will give me the error
 // let arr1:[string,number] = [1,"rishi"]
 
-let arr : [number, string, object] = [1,"this is best example of tuples",{value:"it include all pf them"}]
-
+let arr: [number, string, object] = [
+  1,
+  "this is best example of tuples",
+  { value: "it include all pf them" },
+];
 ```
 
 ### enums
@@ -121,45 +122,67 @@ enumaration means jb value ko key value pair me rkhna.
 // we predefined the properties and setup their values
 // isko basically pehle set kr dete han use krne ke liye
 
-enum userRoles{
-    ADMIN="admin",
-    GUEST="guest",
-    SUPER_ADMIN="super_admin"
+enum userRoles {
+  ADMIN = "admin",
+  GUEST = "guest",
+  SUPER_ADMIN = "super_admin",
 }
-enum StatusCode{
-        ABANDONED=" abandoned status code 500",
-        NOTFOUND=" not found status code 404",
-
+enum StatusCode {
+  ABANDONED = " abandoned status code 500",
+  NOTFOUND = " not found status code 404",
 }
 
-console.log(StatusCode.ABANDONED,
-StatusCode.NOTFOUND
-)
+console.log(StatusCode.ABANDONED, StatusCode.NOTFOUND);
 // userRoles.SUPER_ADMIN
 ```
 
 after converting we get this in js
 
 ```js
-
 // we predefined the properties and setup their values
-// isme 
+// isme
 var userRoles;
 (function (userRoles) {
-    userRoles["ADMIN"] = "admin";
-    userRoles["GUEST"] = "guest";
-    userRoles["SUPER_ADMIN"] = "super_admin";
+  userRoles["ADMIN"] = "admin";
+  userRoles["GUEST"] = "guest";
+  userRoles["SUPER_ADMIN"] = "super_admin";
 })(userRoles || (userRoles = {}));
 
 var StatusCode;
 (function (StatusCode) {
-    StatusCode["ABANDONED"] = " abandoned status code 500";
-    StatusCode["NOTFOUND"] = " not found status code 404";
+  StatusCode["ABANDONED"] = " abandoned status code 500";
+  StatusCode["NOTFOUND"] = " not found status code 404";
 })(StatusCode || (StatusCode = {}));
 console.log(StatusCode.ABANDONED, StatusCode.NOTFOUND);
 // userRoles.SUPER_ADMIN
-
-
 ```
 
+### Some keywords
+
 - Any unknown Void null Undefined Never
+
+jb koi variable create krte han or uska type na btaye to use any kehte han.
+
+- any
+
+```js
+// here we have not defined the type of a1 so it is any by default. esa koi bhi dataset jiska type define nhi hai by default any hoga.
+// isme koi value btane ki jrurat nhi kuch bhi rkh skte han kbhi bhi use kr skte han
+
+let a1; // any
+```
+
+- unknown
+
+```ts
+// it is advanced version of unkown it helps in type narrowing it also allow any type of value but jb hm use krenge tb btana pdega ki kya value hai
+let a: unknown;
+
+a = 12;
+a = "harsh";
+
+if (typeof a === "string") {
+  // return a.charAt()
+} else if (typeof a === Number) {
+}
+```
