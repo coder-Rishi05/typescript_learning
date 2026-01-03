@@ -168,6 +168,35 @@ console.log(StatusCode.ABANDONED, StatusCode.NOTFOUND);
 
 
 ```
+
 ### Some keywords
 
 - Any unknown Void null Undefined Never
+
+jb koi variable create krte han or uska type na btaye to use any kehte han.
+
+- any
+
+```js
+// here we have not defined the type of a1 so it is any by default. esa koi bhi dataset jiska type define nhi hai by default any hoga.
+// isme koi value btane ki jrurat nhi kuch bhi rkh skte han kbhi bhi use kr skte han
+
+let a1; // any
+```
+
+- unknown
+
+```ts
+// it is advanced version of unkown it helps in type narrowing it also allow any type of value but jb hm use krenge tb btana pdega ki kya value hai
+let a: unknown;
+
+a = 12;
+a = "harsh";
+
+if (typeof a === "string") {
+  // return a.charAt()
+} else if (typeof a === Number) {
+}
+```
+
+
