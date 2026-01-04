@@ -185,4 +185,58 @@ if (typeof a === "string") {
   // return a.charAt()
 } else if (typeof a === Number) {
 }
+
+yhan basically pehle conditions lgake btana pdega ki type kya hai tbhi uspe stype specific operations perform honge.
+
 ```
+
+- Void
+
+this keyword used on a function which return nothing
+
+```js
+
+function abcd : void(){
+  console.log("hey")
+}
+function abcd : Number(){
+  console.log("hey")
+  return 12
+}
+function abcd : String(){
+  console.log("hey")
+  return "Hey"
+}
+
+```
+
+- Null
+
+jb bhi koi cheez find krte han pr nhi milti use null kehte han
+
+```js
+// yhan null type nhi hota agr value null hoti hai to uska type any set hota hai bydefault
+let a1 = null; // yhan a1 type any hogi
+let a: null = null;
+```
+
+- Undefined
+a variable with no value.
+
+- Never
+
+it is used where kuch bhi return nhi hoga
+
+```js
+
+function ab():never{
+  while(true)
+}
+ab()
+console.log("run it")
+
+// ye block kr deta hai execution ko iske baad wala code kbhi run nho hota
+
+```
+basics complete
+---
