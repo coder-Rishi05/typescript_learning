@@ -82,5 +82,120 @@ abcd(obj1)
 
 • Type aliases
 
-• Intersection types
+```js
+
+// •Extending interfaces
+
+// extend means taking properities of previous object into new object
+// here we already create User with 3 properties name, email and password
+// then create a admin which extends User and a admin properity.
+// now when we will use Admin it will have 4 properties 1 itself and 3 of the User which it was inheriting.
+// 
+interface User {
+    name:string,
+    email:string,
+    password:string,
+}
+
+interface Admin extends User{
+    admin:boolean
+}
+
+function abcd(obj:User){
+ console.log(obj.email)
+    console.log(obj.name)
+    console.log(obj.password)
+}
+
+function abcd2(obj1:Admin){
+    console.log(obj1.admin)
+    console.log(obj1.email)
+    console.log(obj1.name)
+    console.log(obj1.password)
+
+}
+
+
+
+// agr mai same name se interface bnata hun to vo merge ho jaaenge
+interface Abcd {
+    name:string
+}
+interface Abcd {
+    email:string
+}
+
+
+function a(obj:Abcd){
+    console.log(obj.name)
+    console.log(obj.email)
+}
+
+
+
+
+```
+- Type aliases
+
+```js
+// type alias
+
+// hm khud ke bhi types bna skte han
+
+type rishi = number
+
+let a : rishi ;
+// now a's type will automatically be number
+a = 45
+
+type numStrNull = number | string | null | {} | []
+
+let b : numStrNull; 
+b = 1
+b = "this is string"
+b = null
+
+
+// now b can have 3 types or ab ek hi varible me ye likhne ki jrurat nhi hai  number | string | null basically shorthand ki tarah kaam krega
+```
+
+
+- Intersection types
+
+```js
+
+
+
+// union
+let a : string | null ; // this | is called union
+// Intersection 
+let b : string | null ; // this | is called union
+
+// Intersection types
+type User = {
+    name:string,
+    email:string
+}
+
+type Admin  = User & {
+    getDetails(user:string):void
+}
+
+function abcd(a:Admin){
+    a.name
+    a.getDetails
+    a.email
+}
+
+// the type works almost same as interface and instead extend we use & operator
+// but there are some diffrences which are : 
+// type abcd = number 
+// type abcd = string
+
+// here duplicate variables will give error but in interafce it was merging
+
+// type ka kaam hai type create krna datatypes use krna
+// interface ka kaam hai object ke type define krna
+
+```
 

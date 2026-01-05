@@ -1,15 +1,9 @@
-// we predefined the properties and setup their values
-// isme 
-var userRoles;
-(function (userRoles) {
-    userRoles["ADMIN"] = "admin";
-    userRoles["GUEST"] = "guest";
-    userRoles["SUPER_ADMIN"] = "super_admin";
-})(userRoles || (userRoles = {}));
-var StatusCode;
-(function (StatusCode) {
-    StatusCode["ABANDONED"] = " abandoned status code 500";
-    StatusCode["NOTFOUND"] = " not found status code 404";
-})(StatusCode || (StatusCode = {}));
-console.log(StatusCode.ABANDONED, StatusCode.NOTFOUND);
-// userRoles.SUPER_ADMIN
+// type alias
+var a;
+// now a's type will automatically be number
+a = 45;
+var b;
+b = 1;
+b = "this is string";
+b = null;
+// now b can have 3 types or ab ek hi varible me ye likhne ki jrurat nhi hai  number | string | null basically shorthand ki tarah kaam krega
