@@ -150,6 +150,44 @@ console.log(z.a)
 
 - Access modifiers (public, private, protected)
 
+```js
+
+// Access modifiers (public, private, protected)
+
+// public : is property ko class me khin bhi acess kr lo, khin bhi change kr lo
+// constructor method and inheritance me value change ho jaaegi
+
+// private : is property ko class me use kr skte han, method me use kr skte han pr inheritance krke nhi kr skte.
+
+// protected : usi class me or inherited class me hi use ho paaega bahar nhi main and only subclasses
+
+class BottleMaker{
+    protected achi : string = "new"
+    constructor(private name:string) {
+
+    }
+}
+
+class Metal extends BottleMaker {
+
+    constructor(name:string){
+        super(name)
+    }
+
+    getValue(){
+        console.log(this.name, this.achi)
+    }
+
+}
+
+let b1 = new Metal("rishi")
+
+b1.getValue() // the value acessible in public also will be in private but with warning.
+
+b1.achi
+
+```
+
 - Readonly properties
 
 - Optional properties
