@@ -38,8 +38,6 @@ In both JavaScript and TypeScript, the constructor runs exactly once per object 
 🎯 Interview Point
 
 Constructors help ensure that an object is always created in a valid state.
-
-
 ```
 
 ```js
@@ -70,15 +68,15 @@ let device_One = new Device()
 class BottleMaker {
 
     constructor(public name:string, public price:number) {
-        
+
     }
 
 }
- 
+
 const obj = new BottleMaker("Milton",3000)
 
 // jb bhi class ko chalaenge constructor pehle chalega.
-// 
+//
 class HumanMaker {
     age = 0;
     constructor (public name:string, public isHandSome:boolean){
@@ -105,7 +103,7 @@ hm.age = 20
 
 class MusicDevice {
     constructor(public name:string, public singer:string, public thumbnail:string, public length:number ) {
-        
+
     }
 }
 
@@ -113,6 +111,41 @@ let MusicDevice_one = new MusicDevice("saiyara","imran","maksad",45);
 let MusicDevice_Twp = new MusicDevice("sai","imranew","mksad",15);
 
 
+```
+
+- this keyword
+
+```js
+// this keyword
+
+// jb bhi hm kisi class ke ander han or uske alag alag methods hote han to uske ander hme kisi method ko touch krna hai to this keyword ka use krenge.
+
+class A {
+  name = "rishi";
+
+  // class ke ander bne function ko method kehte han
+  changeName() {
+    // class ke ander bne hue kisi bhi variable ko acess krne ke liye this keyword lagana compulsory hai jo ki us method ka part nhi hai. jaise yhan name changeName ka nhi hai pr iske khud ke local variabes ko acess krne ke liye this ki need nhi hoti
+    // also method ke ander koi property nhi bna skte sirf bahr wali ko access kr skte han.
+    let a;
+    a = 12;
+    this.name;
+  }
+}
+
+let a1 = new A();
+
+console.log(typeof a1.changeName);
+
+class a {
+    constructor(public a : string){
+        this.a = a
+    }
+}
+
+let z = new a("rishi")
+
+console.log(z.a)
 ```
 
 - Access modifiers (public, private, protected)
