@@ -190,9 +190,62 @@ b1.achi
 
 - Readonly properties
 
+```js
+
+// readonly basically keyword jo ki kisi bhi variable ko readonly bnata hai taki uski value change na ho default jo di hai vhi ho
+class User {
+    constructor (public readonly name:string){}
+    changeName(){
+        this.name = "vrishi"
+    }
+}
+
+let u1 = new User("rishi")
+
+u1.changeName()
+
+// 
+```
+
 - Optional properties
 
+```js
+
+class gender{
+    constructor (public name : string,public age: number, public gender?:string){}
+}
+
+let u1 = new gender("rishi",12,"Male")
+
+let u2 = new gender("man",45)
+
+// basiccally jb hm constructor me varibale define krte han to hm ? use kr skte han taki value dene ke time vo compulsory na ho and value na dene pe undefined aaega. ex: public gender?:string
+
+    
+
+```
+
 - Parameter properties
+
+```js
+// this is another way of initialising a class member
+class A {
+    public name;
+    public age;
+
+    constructor(name:string,age:number){
+        this.name = name;
+        this.age = age
+    }
+
+}
+
+// this is another way where we declare and initialise the varibale on constructor this is called parameter properties.
+class gender{
+    constructor (public name : string,public age: number, public gender?:string){}
+}
+
+```
 
 - Getters and setters
 
