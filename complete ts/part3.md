@@ -204,7 +204,7 @@ let u1 = new User("rishi")
 
 u1.changeName()
 
-// 
+//
 ```
 
 - Optional properties
@@ -221,7 +221,7 @@ let u2 = new gender("man",45)
 
 // basiccally jb hm constructor me varibale define krte han to hm ? use kr skte han taki value dene ke time vo compulsory na ho and value na dene pe undefined aaega. ex: public gender?:string
 
-    
+
 
 ```
 
@@ -249,6 +249,72 @@ class gender{
 
 - Getters and setters
 
+```js
+
+
+// - Getters and setters
+
+class User{
+    constructor (public name : string,public age: number, public gender?:string){
+
+    }
+    getName (){
+        return this.name;
+    }
+    getAge (){
+        return this.age;
+    }
+
+    setName( name: string){
+        return this.name = name
+
+    }
+    setAge( age: number){
+        return this.age = age
+
+    }
+}
+
+
+let u1 = new User("Rishi", 45);
+
+u1.getName()
+
+u1.getAge()
+
+// u1.setName("Rishabh")
+
+// u1.setAge(20)
+
+// getter : class ke ander ka ek esa method jo class ke  value nikal ke de.
+// setter : class ke ander ka ek esa method jo class ke  value nikal set kre de.
+// hm norammaly bhi bna skte han pr typescript thoda akag tarike se krta hai isliye jis value ko getter and setter se change rkna hai usko mark kr lo
+
+
+class Animal{
+    constructor (public _name : string,public age: number, public gender?:string){
+
+    }
+   get name(){
+    return this._name
+   }
+   set name(value){
+     this._name = value
+   }
+
+}
+
+let cat = new Animal("tiger",19)
+
+cat._name // not need to call directly value mil jaaegi
+
+cat._name = "rishabh"
+
+
+```
+
 - Static members
+
+
 
 - Abstract classes and methods
