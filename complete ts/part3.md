@@ -315,6 +315,61 @@ cat._name = "rishabh"
 
 - Static members
 
+```js
 
+
+// ese member function jinko use krne ke liye koi instance bnane ki jrurat na pde.
+
+
+class Hero {
+    static varsion = 1.0;
+    static getNumber(){
+        return Math.random()
+    }
+}
+
+Hero.varsion
+Hero.getNumber
+
+
+```
 
 - Abstract classes and methods
+
+// - Abstract classes and methods
+
+// iska mtlb jb bhi class bnaenge
+// iski bs base values hongi iska instance bnane ki jarurat nhi.
+
+An abstract class is a class that cannot be instantiated directly and is meant to be extended by other classes.
+It can contain both:
+
+abstract methods (without implementation)
+
+concrete methods (with implementation)
+
+Abstract methods must be implemented by all derived classes.
+
+🎯 Interview Point
+
+Abstract classes enforce a contract while still allowing shared base logic.
+
+```js
+abstract class Payment {
+  abstract pay(amount: number): void;
+
+  receipt() {
+    console.log("Receipt generated");
+  }
+}
+
+class UPI extends Payment {
+  pay(amount: number) {
+    console.log(`Paid ₹${amount} via UPI`);
+  }
+}
+// Cannot instantiate abstract class
+// new Payment() ❌
+
+
+```
