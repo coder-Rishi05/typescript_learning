@@ -190,3 +190,44 @@ function abc<T>(a: T, b: T): T {
 
 abc<string>("hey", "hello");
 ```
+
+## imports and exports
+
+payment.ts
+
+```js
+export function getPaymentDetails(val: number): void {
+  console.log(val);
+}
+export function addPaymentDetails() {}
+
+// app.ts
+
+// Modules
+
+// exporting and importing
+// default exports
+
+import { getPaymentDetails, addPaymentDetails } from "./payment";
+
+getPaymentDetails(20);
+
+// exporting class
+
+class BottleMaker {
+  constructor(name: string) {
+    console.log(name);
+  }
+}
+
+export default BottleMaker;
+
+// importing and using class
+import { getPaymentDetails, addPaymentDetails } from "./payment";
+
+import BottleMaker from "./payment";
+
+getPaymentDetails(20);
+
+let a = new BottleMaker("heoo");
+```
