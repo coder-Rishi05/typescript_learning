@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        background-color: #1f1d1f;
+        color: whitesmoke;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 10px double white;
+        border-radius: 12px;
+        padding: 2rem 4rem;
+        gap: 3rem;
+
+        h1 {
+            font-family: 'Times New Roman';
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            padding: 2rem 0;
+            font-size: 2rem;
+        }
+
+        .btns {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .btns>button {
+            padding: 1rem 1.2rem;
+            border: 2px solid black;
+            border-radius: 32px;
+            cursor: pointer;
+            transition: all ease-in .2s;
+            color: aliceblue;
+            font-weight: 800;
+        }
+
+        .btns>button:hover {
+            scale: 1.05;
+        }
+
+        .btns>button:nth-child(1) {
+            background-color: red;
+        }
+
+        .btns>button:nth-child(2) {
+            background-color: rgb(0, 17, 255);
+        }
+
+        .btns>button:nth-child(3) {
+            background-color: rgb(0, 255, 21);
+        }
+
+    }
+</style>
+
+<body>
+
+    <div class="main">
+        <h1>Couter App</h1>
+        <h2>Number</h2>
+        <div class="btns">
+            <button class="one" >Increment</button>
+            <button class="two" >Decrement</button>
+            <button class="three" >Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

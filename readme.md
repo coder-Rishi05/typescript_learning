@@ -455,28 +455,6 @@ function abcd(a:Admin){
 
 - topic
 
--  •Class definition
-
-
--  Classes and Objects
-
-it is basically structure.
-
-```js
-
-class Device {
-    name="lg";
-    price=12000
-    category = "digital"
-}
-
-let device_One = new Device()
-
-
-
-```
-
-
 -  •Constructors
 
 -  •Access modifiers (public, private, protected)
@@ -492,5 +470,4 @@ let device_One = new Device()
 -  •Static members
 
 -  •Abstract classes and methods
-
 
