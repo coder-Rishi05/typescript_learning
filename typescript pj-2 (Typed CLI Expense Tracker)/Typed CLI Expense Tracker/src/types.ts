@@ -5,7 +5,7 @@ export enum Category {
   OTHER = "other",
 }
 
-export interface expence {
+export interface Expense  {
   readonly id: number;
   title: string;
   amount: number;
